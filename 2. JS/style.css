@@ -1,0 +1,122 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  line-height: 1.6;
+  background-color: #f8f9f5;
+  color: #333;
+}
+
+/* Headings */
+h1 {
+  color: #2d6a4f;
+  text-align: center;
+}
+
+h2,
+h3 {
+  color: #40916c;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #b7c9b0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Button */
+button {
+  background-color: #52b788;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #40916c;
+}
+
+/* Lines */
+hr {
+  border: none;
+  border-top: 1px solid #d8e2d0;
+  margin: 20px 0;
+}
+
+/* Result Count */
+#result-count {
+  color: #555;
+  font-weight: bold;
+}
+
+.message-card {
+  background: #ffffff;
+  border-left: 5px solid #52b788;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.message-card h4 {
+  margin: 0 0 8px;
+  color: #2d6a4f;
+}
+
+.message-card p {
+  margin-bottom: 12px;
+}
+
+.like-btn {
+  background: #40916c;
+  padding: 8px 14px;
+  margin-bottom: 10px;
+}
+
+.like-btn:hover {
+  background: #2d6a4f;
+}
+
+.reply-box {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.reply-box input {
+  flex: 1;
+  margin: 0;
+}
+
+.reply-box button {
+  white-space: nowrap;
+}
+
+.replies {
+  margin-top: 12px;
+}
+
+.reply {
+  background: #f1f8f4;
+  border-left: 3px solid #52b788;
+  padding: 8px 12px;
+  margin-top: 6px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}

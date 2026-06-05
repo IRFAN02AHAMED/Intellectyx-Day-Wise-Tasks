@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini ChatGPT Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-top">
+
+                <div class="logo-row">
+
+                    <div class="logo">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+
+                    <button id="menuBtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                </div>
+
+                <button id="newChatBtn" class="new-chat">
+
+                    <i class="fa-solid fa-pen-to-square"></i>
+
+                    <span>New Chat</span>
+
+                </button>
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search Chats">
+
+                </div>
+
+            </div>
+
+            <!-- PINNED -->
+
+            <div class="section">
+
+                <h4>Pinned</h4>
+
+                <div id="pinnedChats">
+
+                    <div class="chat-item">
+                        JavaScript Notes
+                    </div>
+
+                    <div class="chat-item">
+                        CSS Tricks
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RECENT -->
+
+            <div class="section recent">
+
+                <h4>Recent</h4>
+
+                <div id="chatList">
+
+                    
+
+                </div>
+
+            </div>
+
+            <!-- PROFILE -->
+
+            <div class="profile">
+
+                <div class="profile-left">
+
+                    <div class="avatar">
+                        I
+                    </div>
+
+                    <div>
+
+                        <p class="name">
+                            Irfan
+                        </p>
+
+                        <p class="plan">
+                            Free Plan
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button class="upgrade-btn">
+                    Upgrade
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN -->
+
+        <main class="main">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div class="left-top">
+
+                    <h2>
+                        ChatGPT
+                    </h2>
+
+                    <select id="modelSelect">
+
+                        <option>
+                            GPT-4o
+                        </option>
+
+                        <option>
+                            GPT-4.1
+                        </option>
+
+                        <option>
+                            GPT-3.5
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="right-top">
+
+                    <button>
+                        Upgrade
+                    </button>
+
+                    <button>
+                        Share
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- CHAT AREA -->
+
+            <section id="chatArea">
+
+                <div class="message bot">
+
+                    Hello 👋
+
+                    How can I help you today?
+
+                </div>
+
+            </section>
+
+            <!-- INPUT -->
+
+            <div class="input-wrapper">
+
+                <div class="input-container">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Message ChatGPT"></textarea>
+
+                    <div class="input-actions">
+
+                        <button id="attachBtn">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <button id="sendBtn">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

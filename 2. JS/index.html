@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Message Board</h1>
+
+  <p>
+    Welcome! Post messages, like them, and reply.
+  </p>
+
+  <hr>
+
+  <h2>Create Message</h2>
+
+  <form id="message-form">
+    <input id="name-input" type="text" placeholder="Your name" />
+    <br>
+    <textarea id="message-input" placeholder="Write your message..."></textarea>
+    <br>
+    <button type="submit">Post</button>
+  </form>
+
+  <hr>
+
+  <h3>Search</h3>
+  <input id="search-input" type="text" placeholder="Search posts...">
+
+  <hr>
+
+  <h3>Sort</h3>
+  <select id="sort-select">
+    <option value="newest">Newest first</option>
+    <option value="oldest">Oldest first</option>
+    <option value="name">Name (A-Z)</option>
+  </select>
+
+  <hr>
+
+  <h2>Messages</h2>
+
+  <div id="result-count">Showing 0 messages</div>
+  <div id="message-list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
