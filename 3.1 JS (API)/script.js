@@ -20,6 +20,7 @@ async function getWeather() {
       resultBox.innerHTML = `<h2>❌ City not found</h2>`;
       return;
     }
+    
 
     const place = geoData.results[0];
     const lat = place.latitude;
@@ -33,6 +34,8 @@ async function getWeather() {
     const weatherData = await weatherRes.json();
 
     const w = weatherData.current_weather;
+
+  
 
     // 📊 Step 3: Show result
     resultBox.classList.remove("hidden");
