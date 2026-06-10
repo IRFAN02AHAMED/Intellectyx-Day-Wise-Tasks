@@ -1,4 +1,6 @@
-function ReplyList({ replies }) {
+function ReplyList({
+  replies = []
+}) {
   return (
     <div className="replies">
       {replies.map((reply, index) => (

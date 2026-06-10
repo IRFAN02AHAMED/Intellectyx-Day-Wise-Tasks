@@ -1,3 +1,406 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9f5;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+
+  padding: 0;
+}
+
+/* Main Container */
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+h1 {
+  color: #2d6a4f;
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+h2,
+h3 {
+  color: #40916c;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+  text-align: center;
+  color: #484747;
+  margin-bottom: 35px;
+}
+
+/* Search + Sort Layout */
+.search-sort {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+  margin: 30px 0;
+}
+
+.search-section {
+  flex: 3;
+}
+
+.sort-section {
+  flex: 1;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 15px;
+    margin-bottom: 15px;
+
+  border: 1px solid #d7e3d4;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: white;
+  color: #333;
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #52b788;
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Buttons */
+button {
+  background-color: #52b788;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #40916c;
+  transform: translateY(-2px);
+}
+
+/* Result Count */
+.result-count {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Message Card */
+.message-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #52b788;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 18px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.message-card h4 {
+  color: #2d6a4f;
+  margin: 0;
+}
+
+.message-card p {
+  margin: 12px 0;
+}
+
+
+/* Like Button */
+.like-btn {
+  background: #40916c;
+}
+
+.like-btn:hover {
+  background: #2d6a4f;
+}
+
+
+
+
+/* Reply Form Layout */
+
+.reply-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.reply-form input {
+  flex: 1;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.reply-form textarea {
+  flex: 3;
+  min-height: 50px;
+  height: 50px;
+  margin-bottom: 0;
+  resize: none;
+}
+
+.reply-form button {
+  flex-shrink: 0;
+  height: 50px;
+  white-space: nowrap;
+}
+
+.reply-title {
+  margin: 15px 0 10px;
+}
+
+.reply-box {
+  width: 100%;
+  margin-top: 15px;
+}
+
+
+/* Replies */
+.replies {
+  margin-top: 15px;
+}
+
+.reply {
+  background: #f8faf9;
+  border-right: 3px solid #52b788;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #e6ece7;
+  margin: 25px 0;
+}
+
+
+.header {
+  position: relative;
+  text-align: center;
+}
+
+.header button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container.dark {
+  background: #1f2937;
+  color: white;
+}
+
+.container.dark h1,
+.container.dark h2,
+.container.dark h3,
+.container.dark h4 {
+  color: #6ee7b7;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+
+.home-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-page {
+  max-width: 800px;
+  
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+  
+}
+
+.contact-page h2 {
+  color: #2f6f55;
+  margin-bottom: 1rem;
+  
+}
+
+.contact-page > p {
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+/* 
+form {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+} */
+
+.reply-form form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+
+.reply-form form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.reply-form input {
+  flex: 1;
+  width: auto;
+}
+
+.reply-form textarea {
+  flex: 2;
+  width: auto;
+}
+
+
+.contact-card h3 {
+  color: #2f6f55;
+}
+
+.contact-card p {
+  margin: 0.75rem 0;
+  font-size: 1.05rem;
+}
+
+.home-btn:hover {
+  background: #222;
+}
+
+.home-page p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2f6f55;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+  color: #3fa376;
+}
+
+.container.dark input,
+.container.dark textarea,
+.container.dark select {
+  background: #374151;
+  color: white;
+  border-color: #4b5563;
+}
+
+.container.dark .message-card {
+  background: #374151;
+}
+
+.container.dark .reply-box input {
+  background: #374151;
+  color: white;
+  border-color: #4b5563;
+}
+
+.container.dark .reply-box input::placeholder {
+  color: #d1d5db;
+}
+
+.container.dark .reply {
+  background: #4b5563;
+  color: white;
+}
+
+.chat-interface {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-page {
+  text-align: center;
+  padding: 3rem;
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+}
+
+
 /* .counter {
   font-size: 16px;
   padding: 5px 10px;

@@ -36,7 +36,7 @@ h3 {
 /* Subtitle */
 .subtitle {
   text-align: center;
-  color: #666;
+  color: #484747;
   margin-bottom: 35px;
 }
 
@@ -134,12 +134,6 @@ button:hover {
   margin: 12px 0;
 }
 
-/* Message Header */
-.message-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /* Like Button */
 .like-btn {
@@ -150,20 +144,47 @@ button:hover {
   background: #2d6a4f;
 }
 
-/* Reply Box */
-.reply-box {
+
+
+
+/* Reply Form Layout */
+
+.reply-form {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.reply-form input {
+  flex: 1;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.reply-form textarea {
+  flex: 3;
+  min-height: 50px;
+  height: 50px;
+  margin-bottom: 0;
+  resize: none;
+}
+
+.reply-form button {
+  flex-shrink: 0;
+  height: 50px;
+  white-space: nowrap;
+}
+
+.reply-title {
+  margin: 15px 0 10px;
+}
+
+.reply-box {
+  width: 100%;
   margin-top: 15px;
 }
 
-.reply-box input {
-  flex: 1;
-}
-
-.reply-box button {
-  white-space: nowrap;
-}
 
 /* Replies */
 .replies {
