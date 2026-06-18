@@ -1,4 +1,4 @@
-import Typography from "../typography/Typography";
+import Typography from "../common/Typography";
 
 import InputField from "../ui/InputField";
 
@@ -34,23 +34,32 @@ function SearchSort({
 
       <SelectField
         value={sort}
-        onChange={(e) =>
-          setSort(e.target.value)
-        }
+        onChange={(e) => {
+          console.log("NEW SORT =", e.target.value);
+          setSort(e.target.value);
+        }}
         options={[
-          {
-            value: "newest",
-            label: "Newest First",
-          },
-          {
-            value: "oldest",
-            label: "Oldest First",
-          },
-          {
-            value: "name",
-            label: "Name (A-Z)",
-          },
-        ]}
+            {
+              value: "newest",
+              label: "Newest First",
+            },
+            {
+              value: "oldest",
+              label: "Oldest First",
+            },
+            {
+              value: "name",
+              label: "Sender (A-Z)",
+            },
+            {
+              value: "to",
+              label: "Receiver (A-Z)",
+            },
+            {
+              value: "likes",
+              label: "Most Likes",
+            },
+          ]}
       />
     </div>
   </div>

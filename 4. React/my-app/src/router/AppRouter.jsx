@@ -3,14 +3,16 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+import Login from "../pages/Login/Login";
+import ProtectedRoute from "./ProtectedRoute";
 import MainLayout from "../layouts/MainLayout";
+import Home from "../pages/Home/Home";
+import CompaniesPage from "../pages/Companies/CompaniesPage";
 
-import Home from "../pages/Home";
-import Contact from "../pages/Contact";
-import Company from "../pages/Api_Task/App";
-import CreateMessage from "../pages/CreateMessage";
-import ViewMessages from "../pages/ViewMessages";
+import Contact from "../pages/Contact/Contact";
+import Company from "../pages/Companies/CompaniesPage";
+import CreateMessage from "../pages/Messages/CreateMessage";
+import ViewMessages from "../pages/Messages/ViewMessages";
 
 function AppRouter() {
   return (
@@ -18,10 +20,14 @@ function AppRouter() {
       <Routes>
         <Route element={<MainLayout />}>
 
-        
           <Route
             path="/"
             element={<Home />}
+          />
+
+          <Route
+            path="/login"
+            element={<Login />}
           />
 
           {/* <Route
@@ -30,17 +36,23 @@ function AppRouter() {
           /> */}
 
           <Route path="/messages" element={<ViewMessages />} />
-          <Route path="/messages/create" element={<CreateMessage />} />
+          <Route path="/messages/create" element={
+            <ProtectedRoute>
+              <CreateMessage />
+            </ProtectedRoute>
+          } />
 
           <Route
             path="/contact"
             element={<Contact />}
           />
 
-          <Route
-            path="/company"
+          {/* <Route
+            path="/company/zustand"
             element={<Company />}
-          />
+          /> */}
+
+           <Route path="/company" element={<CompaniesPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

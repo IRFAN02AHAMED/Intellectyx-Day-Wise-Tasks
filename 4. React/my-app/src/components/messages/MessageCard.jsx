@@ -1,39 +1,79 @@
-import Typography from "../typography/Typography";
+import Typography from "../common/Typography";
 import MessageForm from "../forms/MessageForm";
 import ReplyList from "./ReplyList";
+import { getAvatarColor } from "../../utils/avatarColor";
+
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import MuiTypography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
 function MessageCard({ message, onLike, onReply }) {
   return (
-    <div className="message-card">
+    <Card sx={{ mb: 2 }}>
+      <CardContent>
 
-      {/* NAME */}
-      <Typography variant="h4">
-        {message.name}
-      </Typography>
+        {/* Sender */}
+        <Stack
+          direction="row"
+          spacing={2}
+          alignItems="center"
+          sx={{ mb: 2 }}
+        >
+          <Avatar sx={{
+            bgcolor: getAvatarColor(message.from),
+            width: 52,
+            height: 52,
+            fontSize: "1.4rem",
+            fontWeight: 700,
+          }}>
+            {message.from?.charAt(0).toUpperCase()}
+          </Avatar>
 
-      {/* MESSAGE TEXT */}
-      <Typography variant="p">
-        {message.text}
-      </Typography>
+          <div>
+            <MuiTypography variant="h6">
+              {message.from}
+            </MuiTypography>
 
-      {/* LIKE BUTTON */}
-      <button onClick={() => onLike(message.id)}>
-        👍 {message.likes}
-      </button>
+            <MuiTypography
+              variant="body2"
+              color="text.secondary"
+            >
+              To: {message.to}
+            </MuiTypography>
+          </div>
+        </Stack>
 
-      {/* REPLY FORM */}
-      <MessageForm
-        isReply={true}
-        buttonText="Reply"
-        onSubmit={(name, text) =>
-          onReply(message.id, name, text)
-        }
-      />
+        {/* Message Text */}
+        <Typography variant="p">
+          {message.text}
+        </Typography>
 
-      {/* REPLIES LIST */}
-      <ReplyList replies={message.replies} />
+        <Divider sx={{ my: 2 }} />
 
-    </div>
+        {/* Like Button */}
+        <button onClick={() => onLike(message.id)}>
+          👍 {message.likes}
+        </button>
+
+        <Divider sx={{ my: 2 }} />
+
+        {/* Reply Form */}
+        <MessageForm
+          isReply={true}
+          buttonText="Reply"
+          onSubmit={(name, text) =>
+            onReply(message.id, name, text)
+          }
+        />
+
+        {/* Replies */}
+        <ReplyList replies={message.replies} />
+
+      </CardContent>
+    </Card>
   );
 }
 

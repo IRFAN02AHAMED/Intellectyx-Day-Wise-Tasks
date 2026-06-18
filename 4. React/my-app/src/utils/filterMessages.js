@@ -1,14 +1,18 @@
-export function filterMessages(
-  messages,
-  search
-) {
+export const filterMessages = (messages, search) => {
+  if (!search) return messages;
+
+  const searchText = search.toLowerCase();
+
   return messages.filter(
     (message) =>
-      message.name
-        .toLowerCase()
-        .includes(search.toLowerCase()) ||
+      message.from
+        ?.toLowerCase()
+        .includes(searchText) ||
+      message.to
+        ?.toLowerCase()
+        .includes(searchText) ||
       message.text
-        .toLowerCase()
-        .includes(search.toLowerCase())
+        ?.toLowerCase()
+        .includes(searchText)
   );
-}
+};

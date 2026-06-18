@@ -1,24 +1,32 @@
-export function sortMessages(
-  messages,
-  sort
-) {
+export function sortMessages(messages, sort) {
+
+  console.log("SORTING:", sort);
   const sorted = [...messages];
 
   switch (sort) {
-    case "oldest":
-      return sorted.sort(
-        (a, b) => a.id - b.id
-      );
-
     case "name":
-      return sorted.sort(
-        (a, b) =>
-          a.name.localeCompare(b.name)
-      );
+  return sorted.sort((a, b) =>
+    a.from.localeCompare(b.from)
+  );
 
-    default:
-      return sorted.sort(
-        (a, b) => b.id - a.id
-      );
+case "to":
+  return sorted.sort((a, b) =>
+    a.to.localeCompare(b.to)
+  );
+
+case "likes":
+  return sorted.sort((a, b) =>
+    b.likes - a.likes
+  );
+
+case "oldest":
+  return sorted.sort((a, b) =>
+    a.createdAt - b.createdAt
+  );
+
+default:
+  return sorted.sort((a, b) =>
+    b.createdAt - a.createdAt
+  );
   }
 }

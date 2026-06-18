@@ -1,7 +1,7 @@
 import { useState } from "react";
 import InputField from "../ui/InputField";
 import TextAreaField from "../ui/TextAreaField";
-import Typography from "../typography/Typography";
+import Typography from "../common/Typography";
 
 function MessageForm({
   onSubmit,
@@ -9,33 +9,31 @@ function MessageForm({
   title = "Create Message",
   isReply = false,
 }) {
-  const [name, setName] = useState("");
+  const [to, setTo] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name.trim() || !message.trim()) return;
+    if (!to.trim() || !message.trim()) return;
 
-    onSubmit(name, message);
+    onSubmit(to, message);
 
-    setName("");
+    setTo("");
     setMessage("");
   };
 
   return (
     <div className={isReply ? "reply-form" : ""}>
-
       <Typography variant={isReply ? "h4" : "h2"}>
         {isReply ? "Reply" : title}
       </Typography>
 
       <form onSubmit={handleSubmit}>
-
         <InputField
-          placeholder="Your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          placeholder="To"
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
         />
 
         <TextAreaField
@@ -47,7 +45,6 @@ function MessageForm({
         <button type="submit">
           {buttonText}
         </button>
-
       </form>
     </div>
   );
